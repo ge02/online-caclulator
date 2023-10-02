@@ -38,7 +38,6 @@
   grid-template-columns: 200px 200px 200px;
 }
 
-// for some css stylings
 body {
   display: flex;
   justify-content: center;

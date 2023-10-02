@@ -1,53 +1,64 @@
 <script>
+ let firstNumber = 1;
+ let message = 'Hello';
+
+function getFirstNumber() {
+  this.firstNumber = document.getElementById("firstN").value;
+  console.log(this.firstNumber);
+}
+
 
 </script>
 
 <template>
-<body>
-  <h1 id="title">Online Calculator</h1>
+  <head>
+    <h1 id="title">Online Calculator</h1>
+    
+  </head>
 
-  <h2>free online calculator</h2>
+  <p>{{ message }}</p>
 
+  <div></div>
 
-</body>
-
-  <div class="game-board">
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
-    <div class="box">200px x 200px</div>
+  <div class="firstN">
+    <label>Type in another number <input type="firstNumber" id="n2" value="5"></label>    
   </div>
 
+  <div></div>
+
+  <div class="secondN">
+    <label>Type in another number <input type="numbers" id="n2"></label>
+  </div>
+
+  <div></div>
+
+  <div class="formal">
+    <button onclick="getFirstNumber()">Get First Number</button>
+  </div>
+
+  <p>{{ firstNumber }}</p>
 </template>
 
 <style>
 #title {
   margin: auto;
-  width: 40%;
+  width: 100%;
   padding: 10px;
 }
 
-.game-board {
-  display: grid;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-columns: 200px 200px 200px;
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  width: 400px;
+  line-height: 26px;
+  margin-bottom: 10px;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-.box {
-  background: #444;
-  border: 1px solid #555;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #AAA;
+input {
+  height: 20px;
+  flex: 0 0 200px;
+  margin-left: 10px;
 }
 </style>
